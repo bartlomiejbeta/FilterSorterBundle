@@ -10,7 +10,7 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Data;
+namespace BartB\Data\Filter;
 
 
 interface FilterInterface

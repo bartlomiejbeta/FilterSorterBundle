@@ -10,11 +10,11 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Data;
+namespace BartB\Data\Filter;
 
-use Docplanner\ApiBundle\Data\Filter\FilterInterface;
-use Docplanner\ApiBundle\Data\Sort\SortType;
-use Docplanner\MainBundle\Entity\Repository\AbstractEntityRepository;
+
+use BartB\Data\Sorter\Sort;
+use BartB\Repository\AbstractEntitySpecificationAwareRepository;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use Happyr\DoctrineSpecification\Specification\Specification;
@@ -23,9 +23,9 @@ interface FilterAdapterInterface
 {
 	public function supports(EntityRepository $entityRepository): bool;
 
-	public function getQueryBuilder(AbstractEntityRepository $entityRepository): QueryBuilder;
+	public function getQueryBuilder(AbstractEntitySpecificationAwareRepository $entityRepository): QueryBuilder;
 
 	public function getSpecification(FilterInterface $filter): Specification;
 
-	public function getOrderSpecification(SortType $sortType): Specification;
+	public function getOrderSpecification(Sort $sort): Specification;
 }

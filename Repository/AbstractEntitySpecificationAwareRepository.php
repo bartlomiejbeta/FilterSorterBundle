@@ -15,10 +15,11 @@ namespace BartB\Repository;
 
 use Doctrine\ORM\QueryBuilder;
 use Happyr\DoctrineSpecification\EntitySpecificationRepository;
+use Happyr\DoctrineSpecification\Specification\Specification;
 
 class AbstractEntitySpecificationAwareRepository extends EntitySpecificationRepository
 {
-	public function applySpecificationToQueryBuilder(QueryBuilder $queryBuilder, $specification = null, $alias = null)
+	public function applySpecificationToQueryBuilder(QueryBuilder $queryBuilder, Specification $specification = null, string $alias = null)
 	{
 		$this->applySpecification($queryBuilder, $specification, $alias);
 	}
