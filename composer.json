@@ -1,0 +1,44 @@
+{
+  "name": "bartlomiejbeta/filter-sorter-bundle",
+  "description": "",
+  "type": "symfony-bundle",
+  "keywords": [
+    "filter",
+    "sorter",
+    "api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bartłomiej Beta",
+      "homepage": "https://github.com/bartlomiejbeta"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BartB\\FilterSorterBundle\\": ""
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "symfony/symfony": "^2.8|^3.0",
+    "happyr/doctrine-specification": "^0.7.2",
+    "sensio/framework-extra-bundle": "^3.0",
+    "myclabs/php-enum": "^1.5",
+    "doctrine/orm": "^2.5",
+    "doctrine/doctrine-bundle": "^1.6",
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "~2.7",
+    "phpunit/phpunit": "^5.4|^6.0"
+  },
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.1-dev"
+    }
+  }
+}
