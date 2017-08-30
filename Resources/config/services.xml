@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+	<services>
+		<!--<service id="calendar.integration.vendor.qbs" shared="false" class="ZL\QBSBundle\Integration\QBSCalendarIntegration">-->
+			<!--<argument type="service" id="calendar.integration.webhook"/>-->
+			<!--<argument type="service" id="logger"/>-->
+			<!--<tag name="calendar.integration.vendor"/>-->
+			<!--<tag name="monolog.logger" channel="calendar_integrations" />-->
+		<!--</service>-->
+	</services>
+</container>
