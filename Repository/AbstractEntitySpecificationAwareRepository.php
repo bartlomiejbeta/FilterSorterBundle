@@ -10,7 +10,7 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Repository;
+namespace BartB\FilterSorterBundle\Repository;
 
 
 use Doctrine\ORM\QueryBuilder;

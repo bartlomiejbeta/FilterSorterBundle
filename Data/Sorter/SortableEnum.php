@@ -10,7 +10,7 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Data\Sorter;
+namespace BartB\FilterSorterBundle\Data\Sorter;
 
 
 interface SortableEnum

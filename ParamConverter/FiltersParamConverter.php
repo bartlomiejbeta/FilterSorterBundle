@@ -10,10 +10,10 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\ParamConverter;
+namespace BartB\FilterSorterBundle\ParamConverter;
 
 
-use BartB\Data\Filter\FilterInterface;
+use BartB\FilterSorterBundle\Data\Filter\FilterInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use JMS\Serializer\Serializer;

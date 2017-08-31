@@ -13,11 +13,11 @@ declare(strict_types=1);
 namespace BartB\FilterSorterBundle\Filter;
 
 
-use BartB\Data\Filter\FilterAdapterInterface;
-use BartB\Data\Filter\FilterInterface;
-use BartB\Data\Sorter\Sort;
-use BartB\Exception\FilterQueryManagerException;
-use BartB\Repository\AbstractEntitySpecificationAwareRepository;
+use BartB\FilterSorterBundle\Data\Filter\FilterAdapterInterface;
+use BartB\FilterSorterBundle\Data\Filter\FilterInterface;
+use BartB\FilterSorterBundle\Data\Sorter\Sort;
+use BartB\FilterSorterBundle\Exception\FilterQueryManagerException;
+use BartB\FilterSorterBundle\Repository\AbstractEntitySpecificationAwareRepository;
 use Doctrine\ORM\QueryBuilder;
 
 class FilterQueryManager
@@ -30,7 +30,7 @@ class FilterQueryManager
 		$this->filterAdapters[] = $filterAdapter;
 	}
 
-	public function getQuery(AbstractEntitySpecificationAwareRepository $entitySpecificationRepository, FilterInterface $filter = null, Sort $sort = null): QueryBuilder
+	public function getQueryBuilder(AbstractEntitySpecificationAwareRepository $entitySpecificationRepository, FilterInterface $filter = null, Sort $sort = null): QueryBuilder
 	{
 		$adapter = $this->getSupportedAdapter($entitySpecificationRepository);
 		$query   = $adapter->getQueryBuilder($entitySpecificationRepository);

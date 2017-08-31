@@ -10,18 +10,17 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Data\Filter;
+namespace BartB\FilterSorterBundle\Data\Filter;
 
 
-use BartB\Data\Sorter\Sort;
-use BartB\Repository\AbstractEntitySpecificationAwareRepository;
-use Doctrine\ORM\EntityRepository;
+use BartB\FilterSorterBundle\Data\Sorter\Sort;
+use BartB\FilterSorterBundle\Repository\AbstractEntitySpecificationAwareRepository;
 use Doctrine\ORM\QueryBuilder;
 use Happyr\DoctrineSpecification\Specification\Specification;
 
 interface FilterAdapterInterface
 {
-	public function supports(EntityRepository $entityRepository): bool;
+	public function supports(AbstractEntitySpecificationAwareRepository $entityRepository, FilterContextInterface $filterContext = null): bool;
 
 	public function getQueryBuilder(AbstractEntitySpecificationAwareRepository $entityRepository): QueryBuilder;
 

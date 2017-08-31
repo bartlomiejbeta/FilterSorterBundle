@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace BartB\FilterSorterBundle;
 
 
-use BartB\DependencyInjection\RegisterRepositoryPass;
+use BartB\FilterSorterBundle\DependencyInjection\RegisterRepositoryPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -10,14 +10,13 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\ParamConverter;
+namespace BartB\FilterSorterBundle\ParamConverter;
 
 
-use BartB\Data\Sorter\Sort;
-use BartB\Data\Sorter\SortableEnum;
-use BartB\Data\Sorter\SortDirectionType;
-use BartB\Exception\SortParamConverterException;
-use Docplanner\ApiBundle\Data\Enum\Sort\Sortable;
+use BartB\FilterSorterBundle\Data\Sorter\Sort;
+use BartB\FilterSorterBundle\Data\Sorter\SortableEnum;
+use BartB\FilterSorterBundle\Data\Sorter\SortDirectionType;
+use BartB\FilterSorterBundle\Exception\SortParamConverterException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\DependencyInjection\Container;
@@ -102,7 +101,7 @@ class SortParamConverter implements ParamConverterInterface
 
 		if (false === is_subclass_of($enum, SortableEnum::class))
 		{
-			throw SortParamConverterException::fromNotImplementedInterface(Sortable::class);
+			throw SortParamConverterException::fromNotImplementedInterface(SortableEnum::class);
 		}
 
 		return $enum;

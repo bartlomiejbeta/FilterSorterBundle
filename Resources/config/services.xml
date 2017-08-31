@@ -6,10 +6,10 @@
 	<services>
 		<service id="filter.query.manager" class="BartB\FilterSorterBundle\Filter\FilterQueryManager">
 		</service>
-		<service id="sort.param_converter" class="BartB\ParamConverter\SortParamConverter">
+		<service id="sort.param_converter" class="BartB\FilterSorterBundle\ParamConverter\SortParamConverter">
 			<tag name="request.param_converter" priority="-1" converter="sort"/>
 		</service>
-		<service id="filter.param_converter" class="BartB\ParamConverter\FiltersParamConverter">
+		<service id="filter.param_converter" class="BartB\FilterSorterBundle\ParamConverter\FiltersParamConverter">
 			<argument type="service" id="serializer"/>
 			<tag name="request.param_converter" priority="-1" converter="filter"/>
 		</service>

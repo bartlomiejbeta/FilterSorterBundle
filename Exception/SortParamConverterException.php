@@ -10,7 +10,7 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\Exception;
+namespace BartB\FilterSorterBundle\Exception;
 
 
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;

@@ -10,7 +10,7 @@
 declare(strict_types=1);
 //@formatter:on
 
-namespace BartB\DependencyInjection;
+namespace BartB\FilterSorterBundle\DependencyInjection;
 
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
