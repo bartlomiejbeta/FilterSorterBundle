@@ -5,7 +5,8 @@
   "keywords": [
     "filter",
     "sorter",
-    "api"
+    "doctrine",
+    "specification"
   ],
   "license": "MIT",
   "authors": [
