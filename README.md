@@ -51,15 +51,15 @@ class CarRepository extends AbstractEntitySpecificationAwareRepository
 ```PHP
 $carCollectionFilter = (new CarCollectionFilter())->setGearboxType('automatic');
 
-		$carSorter     = new CarSort(CarSort::FUEL_TYPE);
-		$sortDirection = new SortDirectionType(SortDirectionType::DESC);
+$carSorter     = new CarSort(CarSort::FUEL_TYPE);
+$sortDirection = new SortDirectionType(SortDirectionType::DESC);
 		
-		/** @var FilterQueryManager $filterQueryManager */
-		$filterQueryManager = $this->get('filter.query.manager');
-		$carRepository      = $this->get('repository.car');
+/** @var FilterQueryManager $filterQueryManager */
+$filterQueryManager = $this->get('filter.query.manager');
+$carRepository      = $this->get('repository.car');
 		
-		$queryBuilder = $filterQueryManager->getQueryBuilder($carRepository, $carCollectionFilter, new Sort($sortDirection, $carSorter));
-		$query        = $queryBuilder->getQuery();
-		$result       = $query->execute();
+$queryBuilder = $filterQueryManager->getQueryBuilder($carRepository, $carCollectionFilter, new Sort($sortDirection, $carSorter));
+$query        = $queryBuilder->getQuery();
+$result       = $query->execute();
 ```
-[Also I prepare example full stand alone](https://github.com/bartlomiejbeta/FilterSorterBundleExample)
+[Also I prepared full stand alone example](https://github.com/bartlomiejbeta/FilterSorterBundleExample)
