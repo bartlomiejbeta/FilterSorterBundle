@@ -55,8 +55,8 @@ $carSorter     = new CarSort(CarSort::FUEL_TYPE);
 $sortDirection = new SortDirectionType(SortDirectionType::DESC);
 		
 /** @var FilterQueryManager $filterQueryManager */
-$filterQueryManager = $this->get('filter.query.manager');
-$carRepository      = $this->get('repository.car');
+$filterQueryManager = $this->filterQueryManager;
+$carRepository      = $this->repostioryCar;
 		
 $queryBuilder = $filterQueryManager->getQueryBuilder($carRepository, $carCollectionFilter, new Sort($sortDirection, $carSorter));
 $query        = $queryBuilder->getQuery();
