@@ -14,9 +14,9 @@ namespace BartB\FilterSorterBundle\ParamConverter;
 
 
 use BartB\FilterSorterBundle\Data\Filter\FilterInterface;
+use JMS\Serializer\SerializerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
-use JMS\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -24,12 +24,12 @@ class FiltersParamConverter implements ParamConverterInterface
 {
 	const QUERY_FILTER_KEY_OPTION = 'queryFilterKey';
 
-	/** @var Serializer */
+	/** @var SerializerInterface */
 	private $serializer;
 
 	private $queryFilterKey = 'filters';
 
-	public function __construct(Serializer $serializer)
+	public function __construct(SerializerInterface $serializer)
 	{
 		$this->serializer = $serializer;
 	}
