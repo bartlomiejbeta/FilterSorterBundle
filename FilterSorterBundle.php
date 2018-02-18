@@ -14,12 +14,13 @@ namespace BartB\FilterSorterBundle;
 
 
 use BartB\FilterSorterBundle\DependencyInjection\RegisterRepositoryPass;
+use BartB\FilterSorterBundle\Filter\FilterQueryManager;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class FilterSorterBundle extends Bundle
 {
-	const FILTER_MANAGER       = 'filter.query.manager';
+	const FILTER_MANAGER       = FilterQueryManager::class;
 	const FILTER_QUERY_ADAPTER = 'filter.query.adapter';
 
 	/** {@inheritdoc} */

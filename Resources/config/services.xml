@@ -4,13 +4,11 @@
 		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		   xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 	<services>
-		<service id="filter.query.manager" class="BartB\FilterSorterBundle\Filter\FilterQueryManager">
-		</service>
-		<service id="sort.param_converter" class="BartB\FilterSorterBundle\ParamConverter\SortParamConverter">
+		<service id="BartB\FilterSorterBundle\Filter\FilterQueryManager"/>
+		<service id="BartB\FilterSorterBundle\ParamConverter\SortParamConverter">
 			<tag name="request.param_converter" priority="-1" converter="sort"/>
 		</service>
-		<service id="filter.param_converter" class="BartB\FilterSorterBundle\ParamConverter\FiltersParamConverter">
-			<argument type="service" id="jms_serializer.serializer"/>
+		<service id="BartB\FilterSorterBundle\ParamConverter\FiltersParamConverter" autowire="true">
 			<tag name="request.param_converter" priority="-1" converter="filter"/>
 		</service>
 	</services>
