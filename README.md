@@ -62,4 +62,5 @@ $queryBuilder = $filterQueryManager->getQueryBuilder($carRepository, $carCollect
 $query        = $queryBuilder->getQuery();
 $result       = $query->execute();
 ```
+TODO: Upgrade example to symfony 3.4
 [Also I prepared full stand alone example](https://github.com/bartlomiejbeta/FilterSorterBundleExample)
