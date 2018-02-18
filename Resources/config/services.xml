@@ -10,7 +10,7 @@
 			<tag name="request.param_converter" priority="-1" converter="sort"/>
 		</service>
 		<service id="filter.param_converter" class="BartB\FilterSorterBundle\ParamConverter\FiltersParamConverter">
-			<argument type="service" id="serializer"/>
+			<argument type="service" id="jms_serializer.serializer"/>
 			<tag name="request.param_converter" priority="-1" converter="filter"/>
 		</service>
 	</services>
