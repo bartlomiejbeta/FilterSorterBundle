@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace BartB\FilterSorterBundle\Data\Transfer;
 
 
+use BartB\FilterSorterBundle\Data\Filter\Context\DefaultFilterContext;
 use BartB\FilterSorterBundle\Data\Filter\FilterContextInterface;
 use BartB\FilterSorterBundle\Repository\AbstractEntitySpecificationAwareRepository;
 
@@ -25,7 +26,7 @@ class BasicRepositoryDTO
 	public function __construct(AbstractEntitySpecificationAwareRepository $abstractEntitySpecificationAwareRepository, FilterContextInterface $filterContext = null)
 	{
 		$this->abstractEntitySpecificationAwareRepository = $abstractEntitySpecificationAwareRepository;
-		$this->filterContext                              = $filterContext;
+		$this->filterContext                              = $filterContext ?? new DefaultFilterContext();
 	}
 
 	public function getAbstractEntitySpecificationAwareRepository(): AbstractEntitySpecificationAwareRepository
@@ -33,8 +34,7 @@ class BasicRepositoryDTO
 		return $this->abstractEntitySpecificationAwareRepository;
 	}
 
-	/** @return FilterContextInterface|null */
-	public function getFilterContext()
+	public function getFilterContext(): FilterContextInterface
 	{
 		return $this->filterContext;
 	}
