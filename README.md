@@ -57,8 +57,13 @@ $sortDirection = new SortDirectionType(SortDirectionType::DESC);
 /** @var FilterQueryManager $filterQueryManager */
 $filterQueryManager = $this->filterQueryManager;
 $carRepository      = $this->repostioryCar;
-		
-$queryBuilder = $filterQueryManager->getQueryBuilder($carRepository, $carCollectionFilter, new Sort($sortDirection, $carSorter));
+$sort 	            = new Sort($sortDirection, $carSorter);
+$limit              = new Limit(1);
+
+$basicRepositoryDTO = new BasicRepositoryDTO($carRepository);
+$queryAttributesDTO = new QueryAttributesDTO($carCollectionFilter, $sort, $limit);
+
+$queryBuilder = $filterQueryManager->getQueryBuilder($basicRepositoryDTO, $queryAttributesDTO);
 $query        = $queryBuilder->getQuery();
 $result       = $query->execute();
 ```
