@@ -20,7 +20,7 @@ use Happyr\DoctrineSpecification\Specification\Specification;
 
 interface FilterAdapterInterface
 {
-	public function supports(AbstractEntitySpecificationAwareRepository $entityRepository, FilterContextInterface $filterContext = null): bool;
+	public function supports(AbstractEntitySpecificationAwareRepository $entityRepository, FilterContextInterface $filterContext): bool;
 
 	public function getQueryBuilder(AbstractEntitySpecificationAwareRepository $entityRepository): QueryBuilder;
 
